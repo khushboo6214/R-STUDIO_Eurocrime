@@ -1,0 +1,29 @@
+---
+title: "R Markdown Task"
+author: "khushboo.satpute 19201672"
+date: "20/09/2019"
+output:
+  pdf_document: default
+  word_document: default
+---
+**“Load the MASS package”**
+##Install the MASS package
+```{r}
+library(MASS)
+data(shrimp)
+```
+
+**“The shrimp dataset”**
+```{r}
+shrimp
+summary(shrimp)
+str((shrimp))
+```
+
+**“Plot”**
+##install the ggplot2 package
+```{r}
+library(ggplot2)
+plot(shrimp)
+```
+
