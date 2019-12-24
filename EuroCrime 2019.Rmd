@@ -1,20 +1,40 @@
 ---
-title: "Assignment 1"
+title: "EuroStat Crime Analysis"
 author: "Khusboo Satpute"
 date: "09/10/2019"
 output: pdf_document
 ---
+## EUROCRIME STAT ANALYSIS
+The dataset EurostatCrime2017.csv records oences (values per hundred thousand in-
+habitants) by oence category in 41 European Countries in 2017. Full information on the
+dataset is available here: https://ec.europa.eu/eurostat/cache/metadata/en/crim_off_
+cat_esms.htm.
+ Complete your assignment using R Markdown, check that all the output and code are
+correctly shown in your nal document. Knit your document frequently to x errors.
+Once completed, submit the Rmd le and the resulting pdf or word document which
+shows all your code.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Task 1: Manipulation
-## 1.Load the dataset EurostatCrime2017.csv
+## 1.Load the dataset EurostatCrime2017.csv. Notice that the rst column of the csv le
+contains the names of the countries that must be read as row names 
+2. What is the size (number of rows and columns) and the structure of this dataset?
+3. Produce appropriate commands to answer the following questions:
+(i) For some countries Theft includes also burglary, and theft of motorised land vehicle,
+in others they are recorded separately. Add a new column called All Theft which
+contains the sum of all the crimes that have a theft component:
+ Theft,
+ Theft of a motorized land vehicle,
+ Burglary,
+ Burglary of private residential premises
+Please consider NA values as 0 in this case. 
+(ii) Remove the columns: Theft, Theft of a motorized land vehicle, Burglary, and
+Burglary of private residential premises.
 ```{r loadDataSet}
-df=read.csv(
-  '/Users/dastan/Desktop/EurostatCrime2017.csv',
-  stringsAsFactors = FALSE,row.names = 1)
+df=read.csv("EurostatCrime2017.csv",  stringsAsFactors = FALSE,row.names = 1)
 
 ```
 
