@@ -1,6 +1,0 @@
-Heart<-read.csv("train_2v_new.csv", header=TRUE, sep=",")
-str(Heart)
-heart <- na.omit(Heart)
-is.na(heart)
-heart
-
